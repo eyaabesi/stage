@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --stage-scale: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020B18;
+  color: #001027;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Widescreen 16:9 Stage (1280x720) centered in viewport */
+.presentation-stage {
+  width: 1280px;
+  height: 720px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(var(--stage-scale));
+  transform-origin: center center;
+  background-color: #F8FAFC;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 16, 39, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbars inside stage content */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 16, 39, 0.15);
+  border-radius: 9999px;
+}
