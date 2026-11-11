@@ -70,6 +70,7 @@ test.describe('PFE Presentation Navigation and Visual Verification in French', (
 
     // Slide 8: Conclusion
     await expect(page.getByRole('heading', { name: 'Bilan du Projet & Évolutions Futures' })).toBeVisible();
-    await expect(page.getByText('Merci de votre attention')).toBeVisible();
+    await expect(page.getByText('Conclusion du Projet')).toBeVisible();
+    await expect(page.getByText('Merci pour votre attention')).toBeVisible();
   });
 });
